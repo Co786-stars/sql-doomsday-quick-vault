@@ -1,0 +1,220 @@
+🧠 SQL Coding Practice — INSERT INTO Edition
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸Question 1: 📱 App Users Table — Data Entry  
+  Insert sample users into the AppUsers table for a mobile app. Use the following details:
+- Table: AppUsers
+- Columns: User_ID, Username, Email, Signup_Date
+
+  Insert these records:
+- Username: NeoTechie, Email: neo@techmail.com, Signup_Date: 2025-09-01
+- Username: PixelQueen, Email: pixel@designhub.com, Signup_Date: 2025-09-05
+- Username: CodeKnight, Email: knight@devverse.io, Signup_Date: 2025-09-10
+
+📝Note:
+- User_ID is auto-incremented, so omit it.
+- Email must be unique.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸Question 2: 🛒 Product Inventory — Data Entry
+  Insert product records into the Products table for an e-commerce store. Use the following details:
+- Table: Products
+- Columns: Product_ID, Product_Name, Price, Stock_Quantity, Category
+
+  Insert these records:
+- Product_Name: Herbal Shampoo, Price: 299.99, Stock_Quantity: 50, Category: Haircare
+- Product_Name: Glow Serum, Price: 499.50, Stock_Quantity: 30, Category: Skincare
+- Product_Name: Aloe Facewash, Price: 199.00, Stock_Quantity: 100, Category: Cleanser
+
+📝Note:
+- Product_ID is manually assigned.
+- Stock_Quantity defaults to 0 if not provided.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸Question 3: 🎓 Course Enrollment — Data Entry
+  Insert enrollment records into the Enrollment table to track student-course registrations. 
+  Use the following details:
+
+- Table: Enrollment
+- Columns: Enrollment_ID, Student_Roll, Course_Code, Enroll_Date
+
+  Insert these records:
+- Student_Roll: 202101, Course_Code: CS101, Enroll_Date: 2025-08-20
+- Student_Roll: 202102, Course_Code: DS201, Enroll_Date: 2025-08-22
+- Student_Roll: 202101, Course_Code: DS201, Enroll_Date: 2025-08-25
+
+📝Note:
+- Enrollment_ID is auto-generated.
+- No duplicate combination of Student_Roll and Course_Code.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸Question 4: 🧾 Invoice Records — Data Entry
+  Insert billing records into the Invoices table. Use the following details:
+- Table: Invoices
+- Columns: Invoice_ID, Customer_Name, Amount, Paid_Status, Due_Date
+
+  Insert these records:
+- Customer_Name: Riya Sharma, Amount: 1500.00, Paid_Status: Pending, Due_Date: 2025-10-05
+- Customer_Name: Arjun Mehta, Amount: 2750.50, Paid_Status: Paid, Due_Date: 2025-09-30
+- Customer_Name: Sneha Kapoor, Amount: 999.99, Paid_Status: Pending, Due_Date: 2025-10-10
+
+📝Note:
+- Invoice_ID is auto-generated.
+- Paid_Status defaults to 'Pending' if not provided.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸Question 5: 🧑‍💼 Employee Attendance — Data Entry  
+  Insert attendance records into the Attendance table. Use the following details:
+- Table: Attendance
+- Columns: Record_ID, Employ_ID, Date, Status
+  
+  Insert these records:
+- Employ_ID: 101, Date: 2025-09-28, Status: Present
+- Employ_ID: 102, Date: 2025-09-28, Status: Absent
+- Employ_ID: 103, Date: 2025-09-28, Status: Leave
+- Employ_ID: 101, Date: 2025-09-29, Status: Present
+- Employ_ID: 102, Date: 2025-09-29, Status: Present
+
+📝Note:
+- Record_ID is auto-generated.
+- Status must be one of 'Present', 'Absent', 'Leave'.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸 Question 6: 📚 Library Books — Data Entry
+Insert sample records into the Books table for a library system. Use the following details:
+- Table: Books
+- Columns: Book_ID, Title, Author, Published_Year, Genre
+
+Insert these records:
+- Title: "Clean Code", Author: Robert Martin, Published_Year: 2008, Genre: Programming
+- Title: "Atomic Habits", Author: James Clear, Published_Year: 2018, Genre: Self-help
+- Title: "The Alchemist", Author: Paulo Coelho, Published_Year: 1988, Genre: Fiction
+
+📝 Note:
+- Book_ID is auto-generated.
+- Published_Year must be greater than 1900.
+- Use proper SQL syntax and end with a semicolon.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸 Question 7: 🚖 Ride Booking System — Data Entry
+Insert ride records into the Rides table for a cab booking app. Use the following details:
+- Table: Rides
+- Columns: Ride_ID, Passenger_Name, Driver_Name, Fare, Ride_Date, Status
+
+Insert these records:
+- Passenger_Name: Ananya Gupta, Driver_Name: Ravi Kumar, Fare: 250.75, Ride_Date: 2025-09-15, Status: Completed
+- Passenger_Name: Mohit Sharma, Driver_Name: Suresh Yadav, Fare: 180.00, Ride_Date: 2025-09-16, Status: Cancelled
+- Passenger_Name: Priya Mehta, Driver_Name: Arjun Singh, Fare: 320.50, Ride_Date: 2025-09-17, Status: Pending
+
+📝 Note:
+- Ride_ID is auto-generated.
+- Status must be one of 'Completed', 'Cancelled', or 'Pending'.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸 Question 8: 🏦 Bank Accounts — Data Entry
+Insert customer account records into the Accounts table. Use the following details:
+- Table: Accounts
+- Columns: Account_No, Holder_Name, Balance, Account_Type, Open_Date
+
+Insert these records:
+- Account_No: 1001, Holder_Name: Rahul Verma, Balance: 15000.00, Account_Type: Savings, Open_Date: 2025-07-01
+- Account_No: 1002, Holder_Name: Sneha Patel, Balance: 25000.50, Account_Type: Current, Open_Date: 2025-07-05
+- Account_No: 1003, Holder_Name: Karan Singh, Balance: 5000.00, Account_Type: Savings, Open_Date: 2025-07-10
+
+📝 Note:
+- Balance defaults to 0 if not provided.
+- Account_Type must be either 'Savings' or 'Current'.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸 Question 9: 🎤 Event Registrations — Data Entry
+Insert participant records into the Registrations table for an event. Use the following details:
+- Table: Registrations
+- Columns: Reg_ID, Participant_Name, Event_Name, Ticket_Type, Registration_Date
+
+Insert these records:
+- Participant_Name: Meera Joshi, Event_Name: TechFest2025, Ticket_Type: VIP, Registration_Date: 2025-08-01
+- Participant_Name: Arjun Kapoor, Event_Name: TechFest2025, Ticket_Type: Regular, Registration_Date: 2025-08-02
+- Participant_Name: Neha Sharma, Event_Name: DesignSummit2025, Ticket_Type: Student, Registration_Date: 2025-08-03
+
+📝 Note:
+- Reg_ID is auto-generated.
+- Ticket_Type must be one of 'VIP', 'Regular', or 'Student'.
+- No duplicate combination of Participant_Name and Event_Name.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+🔸 Question 10: 🏨 Hotel Booking — Data Entry
+Insert reservation records into the Bookings table for a hotel. Use the following details:
+- Table: Bookings
+- Columns: Booking_ID, Guest_Name, Room_No, CheckIn_Date, CheckOut_Date, Payment_Status
+
+Insert these records:
+- Guest_Name: Aman Gupta, Room_No: 201, CheckIn_Date: 2025-09-20, CheckOut_Date: 2025-09-23, Payment_Status: Paid
+- Guest_Name: Riya Mehta, Room_No: 305, CheckIn_Date: 2025-09-21, CheckOut_Date: 2025-09-24, Payment_Status: Pending
+- Guest_Name: Vikram Singh, Room_No: 102, CheckIn_Date: 2025-09-22, CheckOut_Date: 2025-09-25, Payment_Status: Pending
+
+📝 Note:
+- Booking_ID is auto-generated.
+- CheckOut_Date must be greater than CheckIn_Date.
+- Payment_Status defaults to 'Pending' if not provided.
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+
+

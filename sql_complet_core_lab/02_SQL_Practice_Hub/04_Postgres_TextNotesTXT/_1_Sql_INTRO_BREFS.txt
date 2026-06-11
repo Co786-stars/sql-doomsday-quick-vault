@@ -1,0 +1,754 @@
+1) what is SQL ?
+
+SQL is a Structured Query Language that use to interact with database .
+
+
+2) what is the purpose of SQL ?
+
+The purpose of SQL is to Create, Read/Retrieved, Update and delete the data 
+
+3) What is database ?
+
+Database is a system that  use to store, manipulate, organize and help to access the data .
+Database contain Many different type of data in the from of table (Row and Column)
+There are two type of Database Relational and Non-Relational proposed by EF code in 1980 .
+The structure of Relational database  is use to store data in the from of table (row and column)
+The structure of Non-Relational database is use to store data in the from of key-value .
+
+4) When we not use Excel to store data for Database?
+
+We use Excel for Small amount of data.
+We use Excel for one time analysis
+We use Excel for Quick Chart/Graph
+ 
+
+5) when we use  like SQL ?
+
+We use SQL to store large amount of Data
+we use SQL to Store Real time Data From Website/App
+We use SQL because easily combined with Different Dataset
+We use SQL Because It is Easy and safe access 
+We use SQL because provide Data Integrity
+We use SQL because data Integrity 
+ 
+
+6) There are so many platform that use to interact with SQL ? 
+ 
+MySQL
+SQL Server
+SQLite
+PostgreSQL
+ORACLE PL/SQL
+Snowflake
+amazon REDSIFT
+
+
+
+7) What is Query ?
+
+In SQL, a query is a request for data or information from a database means asking a question 
+to the database, and the database responds with the requested information
+
+
+8) What is clause ?                                                           
+
+It is a part of a query that specifies a particular condition or operation. 
+It used to define how data should be filtered, grouped, sorted, or manipulated. 
+Common SQL clause are : - FROM, WHERE, SELECT, HAVING, ORDER BY, GROUP BY, JOIN .  
+
+
+9) What is commands ?
+Types of commands in SQL? 
+DDL (Data Definition Language)
+CREATE, ALTER, DROP, TRUNCATE, RENAME
+
+DML (Data Manipulation Language)
+INSERT, UPDATE, DELETE, MERGE
+
+DQL (Data Query Language) (commonly taught; often treated as part of DML)
+SELECT (and WITH / CTE used with SELECT)
+
+DCL (Data Control Language)
+GRANT, REVOKE
+
+TCL (Transaction Control Language)
+BEGIN/START TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT, RELEASE SAVEPOINT
+#-----------------------------------------------------------------------------------------------------------------------#
+
+The Whole command of SQL are given below : -
+
+**(01) CREATE DATABASE - Creates a new database, table etc.
+**(02) CREATE TABLE - Creates a new table
+**(03) INSERT INTO - Inserts new data into a database
+**(04) SELECT - Extracts data from a database
+**(05) OPERATORS - Performs operations on data in database
+*(06) UPDATE - Updates data or records in a database
+*(07) DELETE - Deletes data or records from a database
+*(08) IS/NOT NULL - use to check empty value or non empty value
+*(09) LIMIT/FETCH - use to fixed number of row and  column.
+*(10) MIN() - return smallest value from selected column
+*(11) MAX() - returns the largest value from selected column 
+*(12) COUNT() - returns the number of rows in a set 
+*(13) SUM() - returns the sum of integer value 
+*(14) AVG() - returns the average value of a numerical column  
+*(15) LIKE - LIKE operator search a specified pattern in a column
+*(16) IN - operator is use with where clause to operate more values 
+*(17) BETWEEN - operator is use to fixed range of a existing data 
+*(18) AS - provide temporary name of a column to make readable 
+(19) JOIN -  use to join table table with specific conditions.
+*(20) UNION - use to Combines result sets and removes duplicates.
+(21) GROUP BY - used to arrange identical data into groups
+(22) HAVING - use as a condition at the place of where .
+(23) EXISTS - used to check existence of record in a subquery.
+
+
+(16) ALTER DATABASE - modifies a database 
+*(16) ALTER TABLE - modifies a table 
+*(17) DROP TABLE - Use to deletes a table 
+(18) CREATE INDEX - creates an index (search key) 
+(19) DROP INDEX - deletes an index 
+
+#________________________________________________________________________________________________________________________#
+
+CREATE COMMAND : -
+
+> create DATABSE command is use to create datable .
+> we cant create multiple database in single statement .
+> when space is given between the name. then use double Quote .
+  
+  syntax : -
+  
+  CREATE DATABASE  YourDatabaseName;
+  CREATE DATABASE  "Your DatabaseName";
+  
+
+
+> Ones we have a database Then we create table within it .
+> Table store structured data and consist of column(fields) and row(records) 
+> CREATE TABLE command is use to create table 
+> Each table contain row(record) and column(fields) along with their datatype
+> Each column of the table written under the small parenthesis
+	
+  Syntax :  -
+  
+  CREATE TABLE YourTableName (
+	
+	column1 datatype
+	column2 datatype
+	column3 datatype
+	.....
+	
+	);
+
+#____________________________________________________________________________________________________________________________#
+
+INSERT COMMAND : -
+
+> After creating table within databse use select * from YourTableName to see table column
+> INSERT INTO statment is use to insert data/records in database using VALUE keyword
+
+  Syntax : - 
+  
+  INSERT INTO YourTableName (column1, column2, column3 ..) 
+  VALUES (column1Value, column2Value, column3Value, ....);
+  SELECT * FROM YourTableName 
+  
+  
+  INSERT INTO YourTableName (column1, column3)
+  VALUES (column1Values, column3Values);
+  SELECT * FROM YourTableName 
+  
+  
+  INSERT INTO YourTableName (column1, column2, column3)
+  VALUES (column1Value, column2Value, column3Value),
+         (column1Value, column2Value, column3Value),
+         (column1Value, column2Value, column3Value);
+  SELECT * FROM YourTableName
+  
+  
+  
+  #________________________________________________________________________________________________________________________________#
+  
+  SLECT COMMAND : -
+  
+ > SELECT statment is a fundamental part of SQL that use to select existing records from databse  
+ > If we Want to retrieve all columns without specifying each one individually, we can use astrisk (*) 
+ > SELECT DISTINCT statement in SQL is used to retrieve unique values from a specified column in a table. 
+ > SELECT DISTINCT  ensures that duplicate values are eliminated, and only distinct (unique) values are returned.
+ >
+  Syntax : -
+  
+  SELECT *  FROM YourTableName
+  
+  SELECT column1, column2 FROM YourTableName
+  
+  SELECT COUNT(column1) FROM YourTableName
+  
+  SELECT DISTINCT column1 FROM YourTableName
+  
+  SELECT COUNT(DISTINCT column1) FROM YourTableName
+ 
+  extra : -
+	SELECT "Employ Name" FROM "Company Employ"; 
+	SELECT 'Sales' FROM "Company Employ";
+	SELECT * FROM "Company Employ" WHERE  "Department" = 'Sales'; #__________________________________________________________________________________________________________________________________#
+  
+  SQL OPERATORS  : -
+  
+  > Operators are symboll or keyword that use to perform operations on data in database
+  > There are seven types of operator in SQL 
+
+  > Arithmetic operators (+, -, *, /. %) _____________________ Use to perform mathmatical operation
+  > Comparison operators (=, >, <, >=, <=, <>)  ______________ Use to compare two data value 
+  > Logical operators (AND, OR, NOT)  ________________________ Use to combine multiple conditions
+  > Bitwise Operator (&, |, ^) _______________________________ Use to perform bit-level operations
+  > Set operator (UNION, UNION ALL, INTERSECT, EXCEPT) _______ Use to combine the results of two queries
+  > String operator (||, +) __________________________________ Use to perform String operation
+  > Other operators (IN, BETWEEN, LIKE, IS NULL) _____________ Dfferent Keyword perform different operation 
+  
+  Note : -
+  
+  (=) single equal sign is use for Comparision in SQL but in other language we use double . 
+  (+) is use for Concatenation and addition in the case of string or integer    
+  UNION is use to Combines the results of two queries and removes duplicates
+  UNION ALL is use to Combines the results of two queries including duplicates
+  INTERSECT is use to returns common records from two queries
+  EXCEPT is use to returns records from the first query that are not in the second query
+  WHERE clause used to filter records in a SQL query 
+  
+  
+  Syntax : -
+  
+  Logical operator : -
+  
+  SLECT column1 FROM YourTableName
+  WHERE condition
+  
+  
+  SELECT column1, column2,.. YourTableName
+  WHERE condition1, AND condition2..;
+  
+  SELECT column1 YourTableName
+  WHERE condition1 OR condition2..;
+  
+  SELECT * FROM YourTableName
+  WHERE NOT condition;
+  
+  
+  Comparision operator : -
+  
+  #______________________________________________________________________________________________________________________________________#
+  
+  
+  ORDER BY : -
+  
+ > ORDER BY is a keyword or clause that used to set result in the from of ascending or descending order
+ > If no key value are given ASC or DESC then value are set by default  in the from of ascending order . 
+ > if value is string then value arrange in alphabetical order  
+  
+   Syntax : -
+  
+   SELECT * FROM YourTableName
+   ORDER BY column1;
+  
+   SELECT * FROM YourTableName
+   ORDER BY column1 DESC;
+  
+   SELECT column1 FROM YourTableName
+   ORDER BY column1 ASC;
+  
+   SELECT * FROM YourTableName
+   ORDER BY column1 ASC, column2 DESC;
+  
+  
+  #__________________________________________________________________________________________________________________________________________#
+  
+  
+  UPDATE : -
+   
+  > UPDATE is used to modify or update  existing records or data in a database.
+  > we use some clause or keywords with update command like SLECT, WHERE etc. 
+  > SELECT is use to choose where we update records and WHERE is use to give condition .  
+  > if WHERE clause is not use then all records are update according to given statment.
+  
+  
+   Syntax : -
+   
+   UPDATE YourTableName  
+   SET column1 = value 
+   WHERE condition;
+   
+   UPDATE YourTableName
+   SET column1  = value, column2 = value;
+   WHERE condition;
+   
+   UPDATE YourTableName  
+   SET column1 = column1+ 500  
+
+   #____________________________________________________________________________________________________________________________#
+   
+   
+   IS/NOT NULL : -
+   
+   > In SQL IS NULL and IS NOT NULL operators are used to check column are empty or non empty
+   > IS NULL operator is used to check if a column that contains Nothing or null (empty) value .
+   > IS NOT NULL operator is used to check if a column that contains Somthing or non null (empty) value .
+   
+   Syntax : -
+   
+   SELECT * FROM YourTableName
+   WHERE column IS NULL
+   
+   SELECT * FROM YourTableName
+   WHERE column IS NOT NULL
+   
+   SELECT column1, column2 FROM YourTableName
+   WHERE column1 IS NULL AND column2 IS NOT NULL
+   
+   #____________________________________________________________________________________________________________________________#
+
+   
+  DELETE : - 
+  
+  > DELETE command is used to remove one or more existing rows from a table 
+  > WHERE (condition) clause or keyword is necessary to use with DELETE command 
+    if we not use condition then all records are delete
+
+  
+  - Effect: The table structure remains intact; only the data (rows) are removed.
+  - Can Use WHERE Clause: Yes — allows selective deletion.
+  - Rollback: Possible if wrapped in a transaction (depends on DB engine).
+  - Triggers: Can activate triggers if defined
+
+  Syntax : -
+
+  DELETE FROM YourTableName; 
+  
+  DELETE FROM YourTableName WHERE condition
+
+
+DROP : -
+
+> DROP command is use to parmently delete the table or Database
+
+- Effect: Completely removes the table and its data from the database.
+- Can Use WHERE Clause: ❌ No — it removes the whole object.
+- Rollback: Not always possible — often irreversible.
+- Triggers: Not fired — the object is gone
+
+Syntax : -
+ 
+ DROP TABLE table_name;
+  
+
+
+#____________________________________________________________________________________________________________________________#
+  
+  
+  SELECT TOP : -
+  
+  > SELECT TOP command is used to set limited number of rows returned in a query response 
+  
+  > SELECT TOP clause mostly useful when working with large datasets, and it helps improve 
+    performance by reducing the amount of data processed and returned
+	
+   Syntax : -
+   
+   SELECT TOP 5 * FROM YourTableName # Use for most of the Database 
+	
+   SELECT * FROM YourTableName
+   LIMIT no_of_records
+   
+   
+   SELECT column1, column2 FROM YourTableame
+   LIMIT no_of_records
+   
+   SELECT * FROM YourTableName
+   FETCH FIRST no_of_records  ROW ONLY 
+   
+   
+   SELECT * FROM YourTableName
+   WHERE conditions
+   ORDER BY column1 ASC
+   LIMIT 5
+   
+   
+   SELECT * FROM YourTableName
+   WHERE conditions
+   ORDER BY column1 ASC
+   FETCH FIRST 2 ROW ONLY ;
+
+   
+   #____________________________________________________________________________________________________________________________#
+   
+   
+   MAX : -
+   
+   > MAX function is use to return largest value within selected column from Database   
+   > AS keyword is used to create an alias, which is a temporary name for a column or table 
+	 that make our queries easier to read and understand
+   
+   Syntax : -
+      
+   SELECT MAX(column1) FROM YourTableName
+   WHERE condition;
+   
+   SELECT MAX(column1), MAX(column2) 
+   FROM YourTableName
+   WHERE condition;
+   
+   SELECT MAX(column1) AS aliasname 
+   FROM YourTableName;
+   
+   SELECT MAX(column1) AS asliasname1, MAX(column2) AS aliasname2
+   FROM YourTableName
+   WHERE condition;
+   
+   #____________________________________________________________________________________________________________________________#
+   
+   
+   MIN : -
+   
+ > MIN function is use to return smallest value within selected column from Database . 
+   
+   SELECT MIN(column1) FROM YourTableName
+   WHERE condition
+   
+   SELECT MIN(column1), MIN(column2) 
+   FROM YourTableName
+   WHERE condition
+   
+   SLECT MIN(column1) AS aliasname
+   FROM YourTableName
+   WHERE condtion;
+   
+   
+   SELECT MIN(column1) AS aliasname1, MIN(column2) AS aliasname2
+   FROM YourTableName
+   WHERE conditon
+   
+   
+   #____________________________________________________________________________________________________________________________#
+  
+  COUNT : -
+  
+ > COUNT is use to return number of row in a table from database 
+ > Null value is not counted that available in database
+   
+   Syntax : -
+   
+   SELECT COUNT(*) FROM YourTableName;
+   
+   SELECT COUNT(column1) FROM YourTableName
+   WHERE condition 
+   
+   #____________________________________________________________________________________________________________________________#
+  
+  
+  SUM : -
+  
+ >  SUM is return addition of numeric column 
+ >  Null value is not added using sum function
+ >  AVG is return average number of numeric column
+ >  AVG = total sum/total count number   
+ 
+  Syntax : -
+  
+  SELECT SUM(column1) 
+  FROM YourTableName
+  
+  SELECT SUM(column1) AS aliasname 
+  FROM YourTableName
+  
+  
+  SELECT AVG(column1)+
+  FROM YourTableName
+  
+  SELECT AVG(column1)  AS aliasname
+  FROM YourTableName
+  
+
+   #____________________________________________________________________________________________________________________________#
+   
+   LIKE 
+   
+ > LIKE operator is used to search for a specified pattern in a column. 
+ > Two wildcard are mostly use with Like operator (%) and (_) 
+   some example of wildcard are : - %, _, ^, -, {}, [],  
+   (%) is denote value zero, one and multipal chracter 
+   (_) is denote value one and single chracter
+   (^)	denote character not in the brackets
+   (-)	denote single character within specified range 
+   ([]) denote single character within the brackets 
+   ({})	denote escaped character
+
+   
+   Syntax : -
+   
+   SELECT * FROM YourTableName
+   WHERE column LIKE wildcardchracter 
+   
+   SELECT conlumn1 YourTableName
+   WHERE column LIKE wildcardchracter
+   
+ 
+   #____________________________________________________________________________________________________________________________#   
+   
+   
+   IN : -
+   
+   IN operator in SQL is used to filter data based on a list of specified values 
+   IN operator is use to specify multipal value in a clause   
+   
+   SELECT * FROM YourTableName
+   WHERE column IN (columnvalue1, columnvalue2, ..);
+   
+   SELECT * FROM YourTableName
+   WHERE column NOT IN (columnvalue1, columnvalue2, ...);
+   
+   
+   #____________________________________________________________________________________________________________________________#
+   
+   
+   BETWEEN : -
+   
+   BETWEEN operator is filter the result within a certain range include numbers, text, or dates. 
+   BETWEEN operator is inclusive, meaning it includes the start and end values specified.
+   
+   Syntax : -
+   
+   SELECT * FROM YourTableName
+   WHERE column1 BETWEEN value1 AND value2
+   
+   SELECT * FROM YourTableName
+   WHERE column1 BETWEEN value1 AND value2
+   AND ORDER BY column1
+   
+   SELECT * FROM YourTableName
+   WHERE column1 NOT BETWEEN value1 AND value2
+   
+   
+   #____________________________________________________________________________________________________________________________#   
+   
+   
+   AS : - 
+   
+   AS keyword is mostly use when Two or more columns are combined together
+   AS provide temporary name for column to make readable and understandable 
+   
+   Syntax : -
+   
+   
+   SELECT * FROM YourTableName 
+   AS aliasname
+   
+   SELECT column1 AS aliasname 
+   FROM YourTableName;
+   
+   SELECT column1 AS aliasname, column2 AS aliasname2
+   FROM YourTableName;
+   
+   
+    #____________________________________________________________________________________________________________________________#   
+	
+	
+	JOIN : -
+	
+>	JOIN clause is use to combine rows from two or more table based on related column between them 
+	student
+
+>	INNER JOIN : JOIN rows when data is a match in both tables if data is not match
+				 then row is not included.
+
+>	LEFT JOIN  : JOIN all rows from left table, and matched rows from right table. If data is not match
+				 then we get left table rows with NULL for columns from right table.
+
+>	RIGHT JOIN : JOIN all rows from right table, and matched rows from left table. means this is opposite of LEFT 
+				 JOIN. If data is not match then we get right table rows with NULL for columns from left table
+
+>	FULL JOIN  : JOIN rows when there is a match in either left or right table unmatched rows will show up with NULL 
+				 here there's no match.
+
+>	CROSS JOIN : JOIN Cartesian product of the two tables. 
+
+>	SELF JOIN  : Use for regular join, but the table is joined with itself.
+	
+	
+	Syntax : -
+	
+	
+	############################################################
+	
+		Inner join : 
+	
+		SELECT * FROM YourTableName1 INNER JOIN YourTableName2
+		ON YourTableName.column1 = YourTableName.column1 ; 
+
+	
+		SELECT * FROM YourTableName1 AS aliasname1 
+	    INNER JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname2.column1;
+	
+	
+		SELECT * FROM YourTableName1 AS aliasname1 
+		INNER JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname1.column1; 
+	
+	
+		SELECT aliasname.column1, aliasname2.column2 
+		FROM YourTableName1 AS aliasname1
+		INNER JOIN  YourTableName2 aliasname2
+		ON aliasname1.column = aliasname2.column;	
+		
+	############################################################
+		
+		Left join : 
+		
+		SELECT * FROM YourTableName1 AS aliasname1 
+	    LEFT JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname2.column1;
+	
+	
+		SELECT * FROM YourTableName1 AS aliasname1 
+		LEFT JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname1.column1; 
+	
+	
+		SELECT aliasname.column1, aliasname2.column2 
+		FROM YourTableName1 AS aliasname1
+		LEFT JOIN  YourTableName2 aliasname2
+		ON aliasname1.column = aliasname2.column;	
+	
+	#############################################################
+
+		Right join : 
+	
+		SELECT * FROM YourTableName1 AS aliasname1
+	    RIGHT JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname2.column1;
+	
+	
+		SELECT * FROM YourTableName1 AS aliasname1 
+		RIGHT JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname1.column1; 
+	
+	
+		SELECT aliasname.column1, aliasname2.column2 
+		FROM YourTableName1 AS aliasname1
+		RIGHT JOIN  YourTableName2 aliasname2
+		ON aliasname1.column = aliasname2.column;	
+	
+	#############################################################
+	
+		Full join : 
+	
+		SELECT * FROM YourTableName1 AS aliasname1
+	    FULL JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname2.column1;
+	
+	
+		SELECT * FROM YourTableName1 AS aliasname1 
+		FULL JOIN YourTableName2 AS aliasname2
+		ON aliasname1.column1 = aliasname1.column1; 
+	
+	
+		SELECT aliasname.column1, aliasname2.column2 
+		FROM YourTableName1 AS aliasname1
+		FULL JOIN  YourTableName2 aliasname2
+		ON aliasname1.column = aliasname2.column;
+		
+	#############################################################
+	
+		Self join : ? pending ........ Next Day 
+		?????????????????????????????????????????
+		\>>>>>>>>>>>>>>>>>>>>>>>???????????????? Next time 
+	#________________________________________________________________________________________________________________________#
+
+	UNION : -
+	
+ > 	UNION operator combines the result sets of two or more SELECT statements and removes duplicate rows by default. 
+ >	If we want to include all rows, including duplicates, then we can use UNION ALL.
+    UNION: Combines result sets and removes duplicates.
+	UNION ALL: Combines result sets and includes duplicates.
+	
+	Synax : -
+	
+	SELECT column1 FROM YourTableName1
+	UNION
+	SELECT column1 FROM YourTableName2
+	
+	
+	SELECT column1 FROM YourTableName1
+	UNION ALL
+	SELECT column1 FROM YourTableName2
+	
+	
+	SELECT column1 FROM YourTableName1
+	WHERE != column1value
+	UNION
+	SELECT column1 FROM YourTableName2
+	WHERE != column1Value
+	ORDER BY column1
+	
+	#________________________________________________________________________________________________________________________#
+	
+	GROUP BY : -
+	
+>	GROUP BY is used to arrange identical data into groups and mostly used with aggregate functions 
+	to perform calculations on each group. ex : MAX, MIN, COUNT, AVG, SUM etc.. 
+	 
+	Syntax : -
+	
+	
+	SELECT column1, SUM(column2) FROM YourTableName
+	GROUP BY column1;
+	
+	SELECT column1, COUNT(column2) FROM YourTableName
+	GROUP BY column1;
+	ORDER BY column1 ASC;
+	
+	#________________________________________________________________________________________________________________________#
+	
+	HAVING : -
+	
+> 	HAVING clause is used to filter groups based on a condition, and applied after the GROUP BY clause
+	
+	Syntax : -
+	
+	SELECT column1, SUM(column2) 
+	FROM YourTableName
+	GROUP BY column1
+	HAVING column1 condition
+
+	SELECT column1 AS c1, SUM(column2)
+	FROM YourTableName
+	GROUP BY c1
+	HAVING c1 condition 
+	
+	#________________________________________________________________________________________________________________________#
+	
+	EXISTS : -
+	
+>   EXISTS command is use
+>   subquery is known as an inner query or nested query, means query within another query.
+    
+	Syntax : - 
+	
+	Subquary 
+	
+	SELECT column_name
+	FROM table_name
+	WHERE column_name = (
+		SELECT column_name
+		FROM another_table
+		WHERE condition
+		);
+	???????????????????????????????????????????????? EXITS next time 	
+	????????????????????????????????????????????????????????????????
+	????????????????????????????????????????????????????????????????
+	????????????????????????????????????????????????????????????????
+	
+	#________________________________________________________________________________________________________________________________#
+	
+	
+

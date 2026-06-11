@@ -1,0 +1,151 @@
+I'll create 5 comprehensive questions covering table creation, data insertion, display, and updating operations in a logical sequence.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Question 1: Employee Management System
+
+**Scenario:** Create a database system for managing employee information.
+
+**Tasks:**
+1. Create a table named `employees` with columns: 
+   - `emp_id` (integer, primary key)
+   - `emp_name` (varchar, max 50 characters)
+   - `department` (varchar, max 30 characters)
+   - `salary` (decimal)
+   - `join_date` (date)
+
+2. Insert the following records:
+   - (101, 'John Smith', 'IT', 50000, '2022-01-15')
+   - (102, 'Sarah Johnson', 'HR', 45000, '2021-03-20')
+   - (103, 'Mike Brown', 'IT', 52000, '2022-02-10')
+   - (104, 'Lisa Davis', 'Finance', 48000, '2020-11-05')
+
+3. Display all employees sorted by salary in descending order.
+
+4. Update the salary of all IT department employees by increasing it by 10%.
+
+5. Display the updated employee list sorted by department and then by name.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+## Question 2: Student Grade System
+
+**Scenario:** Create a system to manage student grades.
+
+**Tasks:**
+1. Create a table named `students` with columns:
+   - `student_id` (integer, primary key)
+   - `student_name` (varchar, max 40 characters)
+   - `subject` (varchar, max 20 characters)
+   - `marks` (integer)
+   - `grade` (varchar, max 2 characters)
+
+2. Insert these records:
+   - (1, 'Alice Cooper', 'Mathematics', 85, 'A')
+   - (2, 'Bob Wilson', 'Science', 72, 'B')
+   - (3, 'Carol White', 'Mathematics', 90, 'A')
+   - (4, 'David Lee', 'Science', 65, 'C')
+
+3. Display all students sorted by marks in descending order.
+
+4. Update the grade to 'A+' for all students who have marks greater than 85.
+
+5. Display the final student list sorted by subject and then by marks descending.
+
+---
+
+## Question 3: Product Inventory System
+
+**Scenario:** Create an inventory management system.
+
+**Tasks:**
+1. Create a table named `products` with columns:
+   - `product_id` (integer, primary key)
+   - `product_name` (varchar, max 50 characters)
+   - `category` (varchar, max 20 characters)
+   - `price` (decimal)
+   - `stock_quantity` (integer)
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2. Insert these records:
+   - (1001, 'Laptop', 'Electronics', 750.00, 15)
+   - (1002, 'Desk Chair', 'Furniture', 120.50, 25)
+   - (1003, 'Smartphone', 'Electronics', 500.00, 30)
+   - (1004, 'Bookshelf', 'Furniture', 80.00, 10)
+
+3. Display all products sorted by category and then by price descending.
+
+4. Update the price by applying a 15% discount to all Furniture category products.
+
+5. Display the updated product list sorted by product name.
+
+---
+
+## Question 4: Library Book System
+
+**Scenario:** Create a system to manage library books.
+
+**Tasks:**
+1. Create a table named `books` with columns:
+   - `book_id` (integer, primary key)
+   - `title` (varchar, max 100 characters)
+   - `author` (varchar, max 50 characters)
+   - `genre` (varchar, max 20 characters)
+   - `available_copies` (integer)
+
+2. Insert these records:
+   - (501, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 5)
+   - (502, 'Introduction to Python', 'John Doe', 'Education', 8)
+   - (503, '1984', 'George Orwell', 'Fiction', 3)
+   - (504, 'Data Science Basics', 'Jane Smith', 'Education', 6)
+
+3. Display all books sorted by genre and then by title.
+
+4. Update the available copies by adding 2 more copies to all Education genre books.
+
+5. Display the updated book list sorted by available copies in descending order.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Question 5: Customer Order System
+
+**Scenario:** Create a system to track customer orders.
+
+**Tasks:**
+1. Create a table named `orders` with columns:
+   - `order_id` (integer, primary key)
+   - `customer_name` (varchar, max 40 characters)
+   - `product` (varchar, max 30 characters)
+   - `quantity` (integer)
+   - `order_date` (date)
+   - `status` (varchar, max 15 characters)
+
+2. Insert these records:
+   - (2001, 'Tom Harris', 'Wireless Mouse', 2, '2023-10-15', 'Pending')
+   - (2002, 'Emma Clark', 'Keyboard', 1, '2023-10-16', 'Shipped')
+   - (2003, 'Robert King', 'Monitor', 1, '2023-10-14', 'Pending')
+   - (2004, 'Maria Garcia', 'Webcam', 3, '2023-10-17', 'Pending')
+
+3. Display all orders sorted by order date ascending.
+
+4. Update the status to 'Completed' for all orders that were placed before '2023-10-16'.
+
+5. Display the final order list sorted by status and then by order date.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Each question follows this logical flow:
+1. **CREATE TABLE** - Define the table structure
+2. **INSERT** - Populate with sample data
+3. **SELECT** - Display data with ORDER BY
+4. **UPDATE** - Modify data with WHERE condition
+5. **SELECT** - Display final results with ORDER BY
+
+These Question ensures comprehensive practice of all fundamental database operations in a meaningful sequence.
+

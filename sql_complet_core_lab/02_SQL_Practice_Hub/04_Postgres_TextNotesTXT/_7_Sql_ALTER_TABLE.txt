@@ -1,0 +1,218 @@
+QUESTIONS : - 1 TO 5 (cover most of the topic including ALTER command)
+
+_______________________________________________________________________________________________________
+
+Question 1: E-Commerce Database Setup
+Create a complete e-commerce system:
+
+sql
+-- Create database
+CREATE DATABASE EcommerceDB;
+
+-- Create Products table
+CREATE TABLE Products (
+    product_id SERIAL PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    price DECIMAL(10,2) CHECK (price > 0),
+    category VARCHAR(50),
+    stock_quantity INT DEFAULT 0
+);
+
+-- Create Customers table  
+CREATE TABLE Customers (
+    customer_id SERIAL PRIMARY KEY,
+    customer_name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    join_date DATE DEFAULT CURRENT_DATE
+);
+
+Tasks:
+
+Insert 4 products and 3 customers
+
+Display all products ordered by price (highest first)
+
+Update stock quantity for all electronics products (+20 units)
+
+Delete customers who never placed orders (if any)
+
+Alter Products table: add 'discount_percentage' column
+
+Truncate Customers table with RESTART IDENTITY
+
+
+________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+________________________________________________________________________________________________________________
+
+
+Question 2: Student Management System
+sql
+-- Create Students table
+CREATE TABLE Students (
+    student_id SERIAL,
+    full_name VARCHAR(100),
+    age INT,
+    grade CHAR(1),
+    enrollment_date DATE
+);
+Tasks:
+
+Alter table: add PRIMARY KEY constraint to student_id
+
+Alter table: add CHECK constraint for age (15-25)
+
+Insert 5 student records
+
+Update grade for students with age > 20 ('A')
+
+Delete students enrolled before 2023
+
+Display students ordered by grade, then by name
+
+Drop the Students table completely
+
+________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+________________________________________________________________________________________________________________
+
+Question 3: Library Book Tracking
+sql
+CREATE TABLE Books (
+    book_id INT,
+    title VARCHAR(200),
+    author VARCHAR(100),
+    is_available BOOLEAN,
+    price DECIMAL(8,2)
+);
+Tasks:
+
+Alter table: modify book_id to SERIAL PRIMARY KEY
+
+Alter table: rename 'title' to 'book_title'
+
+Insert 6 book records (mix of available/unavailable)
+
+Update prices: increase by 10% for unavailable books
+
+Delete books with price less than 500
+
+Display available books ordered by author name
+
+Truncate table without resetting identity
+
+________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+________________________________________________________________________________________________________________
+
+
+Question 4: Employee Payroll System
+sql
+CREATE DATABASE Company;
+-- Create table with initial structure
+CREATE TABLE Employees (
+    emp_code SERIAL,
+    emp_name VARCHAR(100),
+    department VARCHAR(50),
+    basic_salary DECIMAL(10,2),
+    joining_date DATE
+);
+Tasks:
+
+Insert 7 employees across different departments
+
+Alter: add 'city' column with DEFAULT 'Mumbai'
+
+Update salaries: +15% for 'IT' department
+
+Delete employees from 'HR' department
+
+Display employees ordered by salary (descending)
+
+Alter: add CHECK constraint (salary >= 15000)
+
+Drop the entire database
+
+________________________________________________________________________________________________________________________
+
+
+
+
+
+
+
+__________________________________________________________________________________________________________________________
+
+Question 5: Restaurant Order Management
+sql
+CREATE TABLE MenuItems (
+    item_id SERIAL PRIMARY KEY,
+    item_name VARCHAR(100) UNIQUE,
+    category VARCHAR(50),
+    price DECIMAL(8,2) NOT NULL,
+    is_vegetarian BOOLEAN
+);
+
+CREATE TABLE Orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_name VARCHAR(100),
+    order_date DATE DEFAULT CURRENT_DATE,
+    total_amount DECIMAL(10,2)
+);
+Tasks:
+
+Insert 5 menu items and 4 orders
+
+Update prices: +8% for non-vegetarian items
+
+Delete orders with total_amount less than 300
+
+Alter MenuItems: add 'description' column
+
+Display menu items ordered by category, then price
+
+Truncate both tables with RESTART IDENTITY
+
+Drop both tables
+
+____________________________________________________________________________________________________________________________
+
+
+
+
+
+
+----------------------------------------------------------------------------------------
+Commands Covered in These Questions:
+✅ CREATE DATABASE
+✅ CREATE TABLE
+✅ ALTER TABLE (ADD, MODIFY, RENAME, DROP, CONSTRAINTS)
+✅ INSERT INTO
+✅ SELECT with ORDER BY
+✅ UPDATE with WHERE
+✅ DELETE with WHERE
+✅ TRUNCATE with RESTART IDENTITY
+✅ DROP TABLE
+✅ DROP DATABASE
+---------------------------------------------------------------------------------------
+
+
+

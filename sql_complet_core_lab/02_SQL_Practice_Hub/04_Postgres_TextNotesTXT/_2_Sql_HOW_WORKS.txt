@@ -1,0 +1,63 @@
+Topic : -
+1) What is Database?
+2) Database v/s DBMS?
+3) Other available database
+4) SQL vs PostgreSQL
+
+1) What is database? 
+   A organized collection of data means it is a method to manipulate and access the data.
+
+   syntax : - How many platform are given to use SQL : - 
+              using [CMD]        :  CUI based
+              using [SQL shell], :  CUI based
+              using [pgAdmin-4]  :  GUI based
+
+
+ * Open 'PostgreSQL'(CMD) :-
+   
+   Win+r               <- enter cmd in run open cmd prompt
+   C:\User\Path\psql   <- enter psql 
+                              -> If the error are occure like this :- 
+                              -> 'psql' is not recognized as an internal or external command,
+                              -> operable program or batch file
+                              -> open environment variables -> path -> New -> set this path (C:\Program Files\PostgreSQL\17\bin).
+  commands : -
+  C:\User\Path\    <- enter \psql -U postgres (to open postgress)
+   
+  postgres#  <- is show u are enter in sql. 
+             <- to check the database in CMD use sql commands
+   
+
+
+ * Open 'SQL shell'(CUI) :- 
+   
+   Server [localhost]: -> press enter
+   Database [postgres]: -> press enter
+   port [5432]:          -> press enter
+   Username [postgress]: -> press enter
+   Password for user postgres:  -> enter password
+   postgres=#
+  
+   postgres# <- is show u are enter in sql. 
+             <- to check the database in CUI(SQL shell) use sql commands
+   
+   commands : -
+   postgres# \list                 <- to check the database
+   postgres# CREATE DATABASE NAME; <- to create the database 
+   postgres# \list                 <- after created NAME database check it through \list
+
+ 
+
+* Open 'PostgreSQL'(GUI) :-
+ 
+  PgAdmin  <- simply click and opent it 
+
+___________________________________________________________________________________________________________________
+
+💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫💫
+
+
+
+
+   
+

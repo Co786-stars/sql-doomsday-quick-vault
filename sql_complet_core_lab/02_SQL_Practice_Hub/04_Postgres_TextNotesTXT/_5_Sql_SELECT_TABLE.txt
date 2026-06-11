@@ -1,0 +1,223 @@
+SELECT command is the most fundamental and frequently used statement in SQL (Structured Query Language). 
+Its primary purpose is to retrieve data from one or more tables in a database.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+## Question 1: Employee Management System
+
+**Scenario:** Create a database system for managing employee information.
+
+**Tasks:**
+1. **CREATE TABLE:** Create a table named `employees` with columns: 
+   - `emp_id` (integer, primary key)
+   - `emp_name` (varchar(50))
+   - `department` (varchar(30))
+   - `salary` (decimal(10,2))
+   - `join_date` (date)
+
+2. **INSERT:** Insert the following records:
+   ```sql
+   (101, 'John Smith', 'IT', 50000.00, '2022-01-15')
+   (102, 'Sarah Johnson', 'HR', 45000.00, '2021-03-20')
+   (103, 'Mike Brown', 'IT', 52000.00, '2022-02-10')
+   (104, 'Lisa Davis', 'Finance', 48000.00, '2020-11-05')
+   (105, 'David Wilson', 'IT', 55000.00, '2023-01-10')
+   ```
+
+3. **SELECT Queries:**
+   - Display all employees
+   - Display employees from IT department only
+   - Display employees with salary greater than 47000, sorted by salary DESC
+   - Display employee names and join dates who joined after '2022-01-01'
+
+4. **UPDATE:** Increase salary by 15% for all IT department employees
+
+5. **Display** the updated employee list sorted by department and salary
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+## Question 2: Student Database System
+
+**Scenario:** Create a system to manage student academic records.
+
+**Tasks:**
+1. **CREATE TABLE:** Create a table named `students` with columns:
+   - `student_id` (integer, primary key)
+   - `student_name` (varchar(40))
+   - `course` (varchar(30))
+   - `marks` (integer)
+   - `city` (varchar(20))
+
+2. **INSERT:** Insert these records:
+   ```sql
+   (1, 'Alice Cooper', 'Mathematics', 85, 'New York')
+   (2, 'Bob Wilson', 'Science', 72, 'Chicago')
+   (3, 'Carol White', 'Mathematics', 92, 'New York')
+   (4, 'David Lee', 'Science', 65, 'Boston')
+   (5, 'Emma Thompson', 'Mathematics', 78, 'Chicago')
+   ```
+
+3. **SELECT Queries:**
+   - Display all students sorted by marks DESC
+   - Display students from 'Mathematics' course only
+   - Display students with marks between 70 and 90
+   - Display students from 'New York' city, sorted by name
+   - Count how many students are in each course
+
+4. **UPDATE:** Increase marks by 5 for all students from 'Chicago' city
+
+5. **Display** the final student list sorted by course and marks DESC
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+## Question 3: Product Inventory System
+
+**Scenario:** Create an inventory management system for a store.
+
+**Tasks:**
+1. **CREATE TABLE:** Create a table named `products` with columns:
+   - `product_id` (integer, primary key)
+   - `product_name` (varchar(50))
+   - `category` (varchar(20))
+   - `price` (decimal(10,2))
+   - `stock_quantity` (integer)
+   - `rating` (decimal(3,2))
+
+2. **INSERT:** Insert these records:
+   ```sql
+   (1001, 'Gaming Laptop', 'Electronics', 1200.00, 15, 4.5)
+   (1002, 'Office Chair', 'Furniture', 150.50, 25, 4.2)
+   (1003, 'Smartphone', 'Electronics', 800.00, 30, 4.7)
+   (1004, 'Bookshelf', 'Furniture', 90.00, 10, 4.0)
+   (1005, 'Headphones', 'Electronics', 200.00, 40, 4.3)
+   ```
+
+3. **SELECT Queries:**
+   - Display all products sorted by price DESC
+   - Display products from 'Electronics' category only
+   - Display products with price less than 500.00
+   - Display products with rating greater than 4.0, sorted by rating DESC
+   - Calculate total value of inventory (price * stock_quantity) for each product
+
+4. **UPDATE:** Apply 10% discount to all Furniture category products
+
+5. **Display** the updated product list with new prices, sorted by category
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+## Question 4: Library Management System
+
+**Scenario:** Create a system to manage library books and members.
+
+**Tasks:**
+1. **CREATE TABLE:** Create a table named `books` with columns:
+   - `book_id` (integer, primary key)
+   - `title` (varchar(100))
+   - `author` (varchar(50))
+   - `genre` (varchar(20))
+   - `published_year` (integer)
+   - `available_copies` (integer)
+
+2. **INSERT:** Insert these records:
+   ```sql
+   (501, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Fiction', 1925, 5)
+   (502, 'Introduction to Python', 'John Doe', 'Education', 2020, 8)
+   (503, '1984', 'George Orwell', 'Fiction', 1949, 3)
+   (504, 'Data Science Basics', 'Jane Smith', 'Education', 2021, 6)
+   (505, 'To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, 4)
+   ```
+
+3. **SELECT Queries:**
+   - Display all books sorted by title
+   - Display Fiction books only
+   - Display books published after 2000
+   - Display books with available copies less than 5
+   - Find the oldest and newest book in the library
+
+4. **UPDATE:** Increase available copies by 2 for all Education genre books
+
+5. **Display** the updated book list sorted by genre and available copies DESC
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+## Question 5: Sales Order System
+
+**Scenario:** Create a system to track customer sales orders.
+
+**Tasks:**
+1. **CREATE TABLE:** Create a table named `orders` with columns:
+   - `order_id` (integer, primary key)
+   - `customer_name` (varchar(40))
+   - `product` (varchar(30))
+   - `quantity` (integer)
+   - `unit_price` (decimal(10,2))
+   - `order_date` (date)
+   - `status` (varchar(15))
+
+2. **INSERT:** Insert these records:
+   ```sql
+   (2001, 'Tom Harris', 'Wireless Mouse', 2, 25.50, '2023-10-15', 'Pending')
+   (2002, 'Emma Clark', 'Keyboard', 1, 45.00, '2023-10-16', 'Shipped')
+   (2003, 'Robert King', 'Monitor', 1, 300.00, '2023-10-14', 'Delivered')
+   (2004, 'Maria Garcia', 'Webcam', 3, 35.00, '2023-10-17', 'Pending')
+   (2005, 'James Miller', 'Keyboard', 2, 45.00, '2023-10-18', 'Pending')
+   ```
+
+3. **SELECT Queries:**
+   - Display all orders sorted by order date
+   - Display Pending orders only
+   - Display orders with total value (quantity * unit_price) greater than 50
+   - Display orders from October 2023 only
+   - Calculate total revenue from all delivered orders
+
+4. **UPDATE:** Change status to 'Processing' for all Pending orders
+
+5. **Display** the final order list sorted by status and order date
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+__________________________________________________________________________________________
+## Key SELECT Concepts Covered in These Questions:
+
+**Basic SELECT:**
+- `SELECT * FROM table`
+- `SELECT specific_columns FROM table`
+
+**WHERE Clause:**
+- Equality: `department = 'IT'`
+- Range: `BETWEEN`, `>`, `<`
+- Date comparisons
+- Multiple conditions
+
+**ORDER BY:**
+- Single column sorting
+- Multiple column sorting
+- ASC/DESC order
+
+**Aggregate Functions:**
+- `COUNT()`
+- Calculations in SELECT
+- Basic statistical operations
+
+**Pattern Matching:**
+- Date range filtering
+- Category-based filtering
+
+Each question provides complete practice from database design to data manipulation and retrieval!
+__________________________________________________________________________________________________
