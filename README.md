@@ -1,5 +1,6 @@
 #  sql-doomsday-quick-vault 
 Perfect for revision, interview preparation, and building a strong SQL foundation.
+
 🚀 Perfect for revision, interview preparation, and building a strong SQL foundation, this repository serves as a complete learning vault crafted with a clean and well‑organized folder structure.
 
 📚 It covers fundamentals, intermediate concepts, and advanced query techniques with practical, real‑world examples that help you understand how SQL works in real business scenarios.
