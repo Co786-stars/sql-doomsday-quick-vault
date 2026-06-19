@@ -95,16 +95,27 @@ CREATE TABLE datatypes_revision (
 SELECT *
 FROM datatypes_revision;
 
+-- industry standard format
 -- creating the table appuser
-CREATE TABLE 
+CREATE TABLE appuser(
+	user_id 	SERIAL   PRIMARY KEY,
+	user_name 	VARCHAR(50) NOT NULL,
+	email 		VARCHAR(150) UNIQUE NOT NULL,
+	signup_date DATE NOT NULL
+);
 
+
+
+-- industry standard format
 -- creating the table invoice
-CREATE TABLE 
+CREATE TABLE invoices(
+	invoice_id 		INT PRIMARY KEY,
+	customer_name 	VARCHAR(25) NOT NULL,
+	amount 			NUMERIC(10, 2),
+	paid_status     VARCHAR(10) DEFAULT 'pending', 
+	due_date		DATE
+);
 
--- 	user_id,
--- 	user_name,
--- 	email,
--- 	signup_date
 /*
 Definition:
 The CREATE TABLE command is a DDL (Data Definition Language) statement in SQL used to create a new table within an existing database. 

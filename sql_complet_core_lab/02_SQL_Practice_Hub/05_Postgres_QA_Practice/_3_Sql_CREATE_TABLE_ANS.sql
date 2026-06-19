@@ -7,10 +7,10 @@
 - Email (max 50 characters, must be unique)
 - Signup_Date (date of registration)*/
 
-CREATE TABLE AppUser (
-	user_id SERIAL PRIMARY KEY,
-	user_name VARCHAR(15) NOT NULL,
-	Email VARCHAR(50) UNIQUE,
+CREATE TABLE appuser (
+	user_id 	SERIAL PRIMARY KEY,
+	user_name 	VARCHAR(15) NOT NULL,
+	Email 		VARCHAR(50) UNIQUE,
 	signup_date DATE NOT NULL
 );
 
@@ -27,11 +27,11 @@ CREATE TABLE AppUser (
 - Category (text, optional)*/
 
 CREATE TABLE products (
-	product_id SERIAL PRIMARY KEY,
-	product_name VARCHAR(30) NOT NULL,
-	price NUMERIC(10, 2) NOT NULL,
-	stock_quantity INT DEFAULT 0,
-	category TEXT
+	product_id	 	SERIAL PRIMARY KEY,
+	product_name	VARCHAR(30) NOT NULL,
+	price 			NUMERIC(10, 2) NOT NULL,
+	stock_quantity 	INT DEFAULT 0,
+	category 		TEXT
 );
 
 
@@ -50,11 +50,11 @@ CREATE TABLE products (
 
 
 CREATE TABLE enrollment(
-	enrollement_id SERIAL PRIMARY KEY,
-	student_roll INT UNIQUE NOT NULL,
-	course_code VARCHAR(10) NOT NULL,
-	enroll_date DATE DEFAULT CURRENT_DATE,
-	CONSTRAINT unique_enrollement UNIQUE (student_roll, course_code)
+	enrollement_id 	SERIAL PRIMARY KEY,
+	student_roll 	INT UNIQUE NOT NULL,
+	course_code 	VARCHAR(10) NOT NULL,
+	enroll_date 	DATE DEFAULT CURRENT_DATE,
+	CONSTRAINT 		unique_enrollement UNIQUE (student_roll, course_code)
 );
 
 
@@ -71,11 +71,11 @@ CREATE TABLE enrollment(
 - Due_Date (date) */
 
 CREATE TABLE invoices(
-	invoice_id SERIAL PRIMARY KEY,
-	customer_name VARCHAR(25) NOT NULL,
-	amount NUMERIC(10, 2),
-	paid_status VARCHAR(10) DEFAULT 'pending',
-	due_date DATE
+	invoice_id 		SERIAL PRIMARY KEY,
+	customer_name 	VARCHAR(25) NOT NULL,
+	amount 			NUMERIC(10, 2),
+	paid_status 	VARCHAR(10) DEFAULT 'pending',
+	due_date 		DATE
 );
 
 

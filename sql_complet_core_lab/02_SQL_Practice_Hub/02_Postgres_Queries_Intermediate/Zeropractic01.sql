@@ -21,7 +21,7 @@ SELECT full_name
 FROM 
 WHERE full_name ='Vikram Sinha';
 
--- ________________________________________________________________________________________________________________
+-- ________________________________________________________________________f________________________________________
 SELECT *
 FROM users;
 
@@ -274,5 +274,68 @@ FROM users
 WHERE emp_salary%4 = 0;
 
 
+SELECT *
+FROM appuser
+WHERE user_id = 1004;
 
 
+SELECT user_name AS employ_name,
+	   email 	 AS employ_email
+FROM appuser;
+
+-- direct method
+INSERT INTO appuser
+VALUES (
+	1005,
+	'lizard',
+	'araj14209@gmail.com',
+	'2026-07-03'
+);
+
+SELECT *
+FROM appuser;
+
+SELECT *
+FROM users;
+
+-- Combines results and removes duplicates
+SELECT email AS email_id
+FROM users
+UNION
+SELECT email AS email_id
+FROM appuser;
+
+-- Returns common records from both queries
+-- if no duplicate are avaliable then nothing display
+SELECT email AS email_id
+FROM users
+INTERSECT
+SELECT email AS email_id
+FROM appuser;
+
+-- select only duplicate value/name 
+SELECT full_name AS employ_name 
+FROM users
+INTERSECT
+SELECT customer_name AS employ_name
+FROM invoices;
+
+
+-- Combines results including duplicates
+SELECT full_name AS employ_name 
+FROM users
+UNION ALL
+SELECT customer_name AS employ_name
+FROM invoices
+ORDER BY employ_name ASC ;
+
+-- Returns records from first query not present in second
+SELECT full_name AS employ_name 
+FROM users
+EXCEPT
+SELECT customer_name AS employ_name
+FROM invoices
+ORDER BY employ_name ASC ;
+
+-- string operation
+SELECT 'hello' || ' ' || 'world';
