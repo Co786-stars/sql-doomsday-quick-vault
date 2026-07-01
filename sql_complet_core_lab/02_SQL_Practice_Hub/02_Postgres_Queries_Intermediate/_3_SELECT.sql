@@ -50,10 +50,6 @@ WHERE customer_name IN ('Ravi Kumar', 'Sneha Sharma', 'Priya Singh');
 
 
 
--- Grouping and aggregation 
--- NEXT DAY GROUP BY COMMANDS__
-
-
  /* ---------------------------------------------------------------------------
    SQL SELECT COMMAND GUIDE
    ---------------------------------------------------------------------------

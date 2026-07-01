@@ -77,36 +77,36 @@ BEGIN/START TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT, RELEASE SAVEPOINT
 
 The Whole command of SQL are given below : -
 
-**(01) CREATE DATABASE - Creates a new database, table etc.
-**(02) CREATE TABLE - Creates a new table
-**(03) INSERT INTO - Inserts new data into a database
-**(04) SELECT - Extracts data from a database
-**(05) OPERATORS - Performs operations on data in database
-*(06) UPDATE - Updates data or records in a database
-*(07) DELETE - Deletes data or records from a database
-*(08) IS/NOT NULL - use to check empty value or non empty value
-*(09) LIMIT/FETCH - use to fixed number of row and  column.
-*(10) MIN() - return smallest value from selected column
-*(11) MAX() - returns the largest value from selected column 
-*(12) COUNT() - returns the number of rows in a set 
-*(13) SUM() - returns the sum of integer value 
-*(14) AVG() - returns the average value of a numerical column  
-*(15) LIKE - LIKE operator search a specified pattern in a column
-*(16) IN - operator is use with where clause to operate more values 
-*(17) BETWEEN - operator is use to fixed range of a existing data 
-*(18) AS - provide temporary name of a column to make readable 
-(19) JOIN -  use to join table table with specific conditions.
-*(20) UNION - use to Combines result sets and removes duplicates.
-(21) GROUP BY - used to arrange identical data into groups
-(22) HAVING - use as a condition at the place of where .
-(23) EXISTS - used to check existence of record in a subquery.
+-**(01) CREATE DATABASE - Creates a new database, table etc.
+-**(02) CREATE TABLE - Creates a new table
+-**(03) INSERT INTO - Inserts new data into a database
+-**(04) SELECT - Extracts data from a database
+-**(05) OPERATORS - Performs operations on data in database
+-**(06) UPDATE - Updates data or records in a database
+-**(07) DELETE - Deletes data or records from a database
+-**(08) IS/NOT NULL - use to check empty value or non empty value
+-**(09) LIMIT/FETCH - use to fixed number of row and  column.
+-**(10) MIN() - return smallest value from selected column
+-**(11) MAX() - returns the largest value from selected column 
+-**(12) COUNT() - returns the number of rows in a set 
+-**(13) SUM() - returns the sum of integer value 
+-**(14) AVG() - returns the average value of a numerical column  
+-**(15) LIKE - LIKE operator search a specified pattern in a column
+-**(16) IN - operator is use with where clause to operate more values 
+-**(17) BETWEEN - operator is use to fixed range of a existing data 
+-**(18) AS - provide temporary name of a column to make readable 
+									**(19) JOIN -  use to join table table with specific conditions.
+-**(20) UNION - use to Combines result sets and removes duplicates.
+									**(21) GROUP BY - used to arrange identical data into groups
+									**(22) HAVING - use as a condition at the place of where .
+									**(23) EXISTS - used to check existence of record in a subquery.
 
 
-(16) ALTER DATABASE - modifies a database 
-*(16) ALTER TABLE - modifies a table 
-*(17) DROP TABLE - Use to deletes a table 
-(18) CREATE INDEX - creates an index (search key) 
-(19) DROP INDEX - deletes an index 
+									**(16) ALTER DATABASE - modifies a database 
+									**(16) ALTER TABLE - modifies a table 
+-**(17) DROP TABLE - Use to deletes a table 
+									**(18) CREATE INDEX - creates an index (search key) 
+									**(19) DROP INDEX - deletes an index 
 
 #________________________________________________________________________________________________________________________#
 

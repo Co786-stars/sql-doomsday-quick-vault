@@ -264,5 +264,41 @@ FROM students
 WHERE roll IN (123);
 
 
+SELECT Invoice_id+200 AS custID,
+	   customer_name AS employe_name,
+	   amount AS total_amount
+FROM invoices;
 
+
+SELECT *
+FROM invoices;
+
+SELECT paid_status AS emp_paid
+	   due_date AS 
+	   amount AS
+
+SELECT full_name AS emp_name,
+	   email AS emailID
+FROM users
+WHERE email = 'aditya@example.com'; 
+
+
+SELECT full_name AS emp_name,
+	   email AS emailID
+FROM users
+WHERE 	email = 'aditya@example.com'
+	AND project_name  ='NcryCore';
+
+
+SELECT emp_id AS employ,
+	   full_name AS employ_name,
+	   department AS employ_department,
+	   emp_salary AS employ_salary
+FROM users
+WHERE   emp_salary >= 10000
+	AND emp_salary <= 15000;
+	
+
+SELECT *
+FROM users
 
