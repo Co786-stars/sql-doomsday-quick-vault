@@ -102,11 +102,11 @@ The Whole command of SQL are given below : -
 									**(23) EXISTS - used to check existence of record in a subquery.
 
 
-									**(16) ALTER DATABASE - modifies a database 
-									**(16) ALTER TABLE - modifies a table 
--**(17) DROP TABLE - Use to deletes a table 
-									**(18) CREATE INDEX - creates an index (search key) 
-									**(19) DROP INDEX - deletes an index 
+-**(16) ALTER DATABASE - modifies a database 
+-**(16) ALTER TABLE - modifies a table 
+**(17) DROP TABLE - Use to deletes a table 
+--**(18) CREATE INDEX - creates an index (search key) 
+-**(19) DROP INDEX - deletes an index 
 
 #________________________________________________________________________________________________________________________#
 

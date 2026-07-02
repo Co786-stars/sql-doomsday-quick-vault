@@ -29,7 +29,66 @@ RENAME TO new_users;
 -- rename the entire table name permanently
 
 
- 
+
+ALTER TABLE new_users
+ALTER COLUMN full_name TYPE VARCHAR(300); 
+-- increases the size of full_name from VARCHAR(200) to VARCHAR(300)
+
+
+
+ALTER TABLE new_users
+ALTER COLUMN emp_salary TYPE NUMERIC(10, 3);
+-- try to change the datatype according to data
+-- changes emp_salary datatype to NUMERIC with 10 digits and 3 decimal places
+
+
+
+ALTER TABLE new_users
+ADD CONSTRAINT slry CHECK (emp_salary < 1000000000); -- if i try to insert salary more then condition got an error 
+-- adds a CHECK constraint that restricts emp_salary to values below 1,000,000
+
+
+ALTER TABLE new_users
+DROP CONSTRAINT slry;
+-- removes the CHECK constraint named slry from the table
+
+
+ALTER TABLE new_users
+ALTER COLUMN depart SET DEFAULT 'bydefaut'
+ -- Sets a default value for a column.'
+
+
+ALTER TABLE new_users
+ALTER COLUMN depart  DROP DEFAULT;
+-- Removes the default value for a column.
+
+
+
+-- CREATE OR REPLACED VIEW
+-- Modify the existing view with a new SELECT query
+CREATE OR REPLACE VIEW vname AS
+SELECT full_name
+FROM new_users
+WHERE emp_salary < 20000;
+-- This updates the view's logic. If data looks same, it means the base table
+-- still returns the same rows, not an issue with the view.
+
+
+-- CREATE OR REPLACED VIEW
+-- Check the view's stored SELECT query (its internal definition)
+SELECT definition
+FROM pg_views
+WHERE viewname = 'vname';
+-- This shows the exact SELECT statement inside the view.
+-- Helps confirm whether the view was updated correctly.
+
+
+-- CREATE OR REPLACED VIEW
+-- Access the updated view data
+SELECT *
+FROM vname;
+-- This displays the rows returned by the modified view.
+-- If results look unchanged, the underlying SStable data did not change.
 
 
 
@@ -113,6 +172,7 @@ RENAME TO new_users;
 	   ALTER TABLE old_table_name
 	   RENAME TO new_table_name;
 	   -- Renames the entire table.
+
 	
 	   ALTER TABLE table_name
 	   ADD CONSTRAINT constraint_name constraint_type (column_name);
@@ -125,6 +185,7 @@ RENAME TO new_users;
 	   ALTER TABLE table_name
 	   ALTER COLUMN column_name SET DEFAULT value;
 	   -- Sets a default value for a column.
+	   
 	
 	   ALTER TABLE table_name
 	   ALTER COLUMN column_name DROP DEFAULT;
@@ -133,82 +194,91 @@ RENAME TO new_users;
 
 
 
-
-
-    ALTER VIEW :
+	ALTER VIEW :
     Used to modify or recreate an existing view.
     Updates the SELECT query of the view.
     Does NOT store data; only changes the definition.
     DDL command → changes the structure of the view.
 
-    Important/syntax:
-      - ALTER VIEW basically redefines the view using a new SELECT statement.
-      - The view must already exist.
-      - You cannot change column datatypes directly; you must change the underlying table.
-      - If the view depends on other objects, they must exist and be valid.
+    Important / Syntax:
+	  - The view must already exist.
+      - Column datatypes cannot be changed through a view.
+      - Underlying base tables must exist and be valid.
+      
+	  MySQL uses:
+            ALTER VIEW view_name AS
+            SELECT column_list
+            FROM table_name
+            WHERE condition;
 
-        ALTER VIEW view_name AS
-        SELECT columns
-        FROM table_name
-        WHERE condition;
-        -- Recreates the view with a new SELECT query.
+      PostgreSQL uses:
+            CREATE OR REPLACE VIEW view_name AS
+            SELECT column_list
+            FROM table_name
+            WHERE condition;
 
 
 
 
-    ALTER INDEX :
+	ALTER INDEX :
     Used to rebuild, reorganize, or rename an index.
     Improves query performance and reduces fragmentation.
     Does NOT change table structure or table data.
     DDL command → index-level structural change.
 
-    Important/syntax:
+    Important / Syntax:
       - REBUILD recreates the index to improve performance.
       - RENAME changes the index name.
-      - Index operations depend on the database system (PostgreSQL, MySQL, SQL Server).
+      - Supported in PostgreSQL, MySQL, SQL Server (syntax varies slightly).
 
-        ALTER INDEX index_name
-        REBUILD;
-        -- Rebuilds the index to fix fragmentation and improve performance.
+      -- Rebuild an index
+      ALTER INDEX index_name
+      REBUILD;
 
-        ALTER INDEX old_index_name
-        RENAME TO new_index_name;
-        -- Renames the index.
-
-
+      -- Rename an index
+      ALTER INDEX old_index_name
+      RENAME TO new_index_name;
 
 
-    ALTER SCHEMA :
+
+
+	ALTER SCHEMA :
     Used to move objects (tables, views, functions) from one schema to another.
     Changes the object's logical location/ownership.
     Does NOT modify data or table design.
     DDL command → schema-level structural change.
 
-    Important/syntax:
+    Important / Syntax:
       - TRANSFER moves an object from old_schema to new_schema.
-      - Object must exist before transferring.
+      - The object must already exist.
       - User must have required permissions.
 
-        ALTER SCHEMA new_schema
-        TRANSFER old_schema.table_name;
-        -- Moves the table from old_schema to new_schema.
+      -- Move an object to another schema
+      ALTER SCHEMA new_schema
+      TRANSFER old_schema.object_name;
 
 
 
-    ALTER USER / ALTER ROLE :
+
+	ALTER USER / ALTER ROLE :
     Used to modify user or role properties.
     Updates login credentials, password, permissions, and attributes.
     Does NOT affect tables or stored data.
     DDL command → security-level change.
 
-    Important/syntax:
+    Important / Syntax:
       - Used to change password or authentication settings.
-      - User must exist before altering.
-      - Permissions depend on database system.
+      - User or role must already exist.
+      - Requires proper permissions.
 
-        ALTER USER user_name
-        WITH PASSWORD = 'new_password';
-        -- Changes the user's password.
+      -- Change user password
+      ALTER USER user_name
+      WITH PASSWORD 'new_password';
+
+      -- Change role password
+      ALTER ROLE role_name
+      WITH PASSWORD 'new_password';
+
 
 
 
@@ -224,7 +294,6 @@ RENAME TO new_users;
       - Object must already exist.
       - Used to update business logic.
 
-        
 		-- Procedure:
         ALTER PROCEDURE procedure_name
         AS
@@ -232,7 +301,6 @@ RENAME TO new_users;
             -- updated logic
         END;
         -- Modifies the stored procedure.
-
 
 
         -- Function:
@@ -244,7 +312,7 @@ RENAME TO new_users;
         END;
         -- Modifies the stored function.
 
-		
+
 
     UPDATE (for comparison):
        - Changes data stored inside rows.
