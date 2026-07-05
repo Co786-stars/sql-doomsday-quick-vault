@@ -16,6 +16,7 @@ CREATE TABLE appuser (
 
 
 
+
 /*
 🔸 Question 2: 🛒 Product Inventory
 
