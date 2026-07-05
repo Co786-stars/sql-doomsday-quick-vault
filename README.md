@@ -1,4 +1,4 @@
-#  sql-doomsday-quick-vault 
+# 💫 💫 sql-doomsday-quick-vault 💫 💫
 Perfect for revision, interview preparation, and building a strong SQL foundation.
 
 🚀 Perfect for revision, interview preparation, and building a strong SQL foundation, this repository serves as a complete learning vault crafted with a clean and well‑organized folder structure.
