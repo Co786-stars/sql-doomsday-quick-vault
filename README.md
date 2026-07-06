@@ -14,3 +14,4 @@
 - Datasets are arranged topic‑wise, helping you practice joins, subqueries, functions, triggers, window functions, CTEs, and optimization techniques in a structured manner.
 
 - This repository reflects a consistent learning journey, offering a clear, systematic path to mastering SQL from basics to advanced — perfect for students, developers, and interview aspirants.
+
