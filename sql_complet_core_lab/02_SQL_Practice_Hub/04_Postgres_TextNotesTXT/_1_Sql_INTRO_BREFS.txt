@@ -95,13 +95,11 @@ The Whole command of SQL are given below : -
 -**(16) IN - operator is use with where clause to operate more values 
 -**(17) BETWEEN - operator is use to fixed range of a existing data 
 -**(18) AS - provide temporary name of a column to make readable 
-									**(19) JOIN -  use to join table table with specific conditions.
+-**(19) JOIN -  use to join table table with specific conditions.
 -**(20) UNION - use to Combines result sets and removes duplicates.
-									**(21) GROUP BY - used to arrange identical data into groups
-									**(22) HAVING - use as a condition at the place of where .
-									**(23) EXISTS - used to check existence of record in a subquery.
-
-
+-**(21) GROUP BY - used to arrange identical data into groups
+-**(22) HAVING - use as a condition at the place of where .
+-**(23) EXISTS - used to check existence of record in a subquery.
 -**(16) ALTER DATABASE - modifies a database 
 -**(16) ALTER TABLE - modifies a table 
 **(17) DROP TABLE - Use to deletes a table 
@@ -576,17 +574,18 @@ Syntax : -
 	
 	Syntax : -
 	
-	
+
 	############################################################
 	
 		Inner join : 
 	
-		SELECT * FROM YourTableName1 INNER JOIN YourTableName2
+		SELECT * FROM YourTableName1 
+		INNER JOIN YourTableName2
 		ON YourTableName.column1 = YourTableName.column1 ; 
 
 	
 		SELECT * FROM YourTableName1 AS aliasname1 
-	    INNER JOIN YourTableName2 AS aliasname2
+   		INNER JOIN YourTableName2 AS aliasname2
 		ON aliasname1.column1 = aliasname2.column1;
 	
 	

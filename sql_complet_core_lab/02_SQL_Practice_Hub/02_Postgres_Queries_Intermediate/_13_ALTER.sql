@@ -4,8 +4,9 @@ RENAME TO procomcoredb;
 
 
 ALTER DATABASE appmasterdb
-RENAME TO masterapp; x
+RENAME TO masterapp;
 -- Rename the database
+
 
 
 -- ALTER TABLE
@@ -20,7 +21,7 @@ DROP COLUMN xyz;
 
 
 ALTER TABLE users 
-RENAME COLUMN department TO depart; 
+RENAME COLUMN department TO depart;
 -- rename the column permanetly
 
 
