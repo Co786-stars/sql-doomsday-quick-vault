@@ -53,3 +53,6 @@ GROUP BY pizza_types.name
 ORDER BY quantity DESC
 LIMIT 5;
 
+
+-- Determine the distribution of orders by hour of the day.
+-- solved
