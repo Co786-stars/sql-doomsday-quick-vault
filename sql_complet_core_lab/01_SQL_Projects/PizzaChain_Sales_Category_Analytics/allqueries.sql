@@ -68,3 +68,15 @@ JOIN  pizza_types
 GROUP BY category
 ORDER BY total_quantity DESC;
 
+
+-- q7.Determine the distribution of orders by hour of the day. 
+-- solved
+
+
+
+
+
+
+
+
+
